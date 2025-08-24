@@ -36,7 +36,6 @@ public class VehicleSelectionController {
   @FXML
   public void initialize() {
     Map<String, Integer> occupiedParkingLotMap = DatabaseConnection.getOccupiedParkingLot();
-    System.out.println(occupiedParkingLotMap);
 
     // 2-Wheeler slots full logic
     Image image = new Image("file:D:/workspace/ParkingSystem/assets/img/full-parking.png");
