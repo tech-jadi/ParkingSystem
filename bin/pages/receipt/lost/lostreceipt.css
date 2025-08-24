@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+#parkingticket {
+    -fx-font-family: "Montserrat", sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 48px;
+}
+
+#printing {
+    -fx-font-family: "Montserrat", sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 32px;
+}
+
+.ticketdetails { 
+    
+    -fx-font-family: "Courier New", sans-serif;
+    -fx-font-size: 13px;
+}
+
+.ticketdate {
+    
+    -fx-font-family: "Courier New", sans-serif;
+    -fx-font-weight:bold;
+    -fx-font-size: 13px;
+}
+
+#thankyou {
+    -fx-font-family: "Courier New", sans-serif;
+    -fx-font-size: 20px;
+}
+
+.total {
+
+    -fx-font-family: "Courier New", sans-serif;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}

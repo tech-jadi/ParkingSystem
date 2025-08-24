@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #383e48;" stylesheets="@start.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pages.starting.StartController">
+   <children>
+      <Label id="companyname" alignment="CENTER" layoutX="250.0" layoutY="-33.0" prefHeight="142.0" prefWidth="500.0" styleClass="title-text" text="ZOMBISAYA MALL" textFill="#7ed957">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label id="button1" fx:id="parkingLabel" alignment="CENTER" layoutX="100.0" layoutY="81.0" onMouseClicked="#switchToVehicleSelection" prefHeight="95.0" prefWidth="330.0" style="-fx-background-color: #7ed957; -fx-background-radius: 20;" text="PARKING" textFill="#383e48" />
+      <Label id="button1" alignment="CENTER" layoutX="570.0" layoutY="81.0" onMouseClicked="#switchToCheckOut" prefHeight="95.0" prefWidth="330.0" style="-fx-background-color: #7ed957; -fx-background-radius: 20;" text="CHECK-OUT" textFill="#383e48" />
+      <ImageView fitHeight="297.0" fitWidth="642.0" layoutX="179.0" layoutY="197.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/img/price1.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

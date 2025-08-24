@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #383e48;" stylesheets="@payment.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pages.payment.PaymentController">
+   <children>
+      <Label id="discounttype" alignment="CENTER" layoutX="413.0" layoutY="-13.0" prefHeight="142.0" prefWidth="499.0" text="DISCOUNT TYPE" textFill="#7ed957">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="160.0" fitWidth="170.0" layoutX="483.0" layoutY="87.0" onMouseClicked="#discountPWD" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/img/pwd%20icon.png" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="142.0" fitWidth="150.0" layoutX="682.0" layoutY="102.0" onMouseClicked="#discountSenior" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/img/senior%20icon.png" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="142.0" fitWidth="153.0" layoutX="460.0" layoutY="297.0" onMouseClicked="#discountStudent" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/img/student%20icon.png" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="167.0" fitWidth="153.0" layoutX="669.0" layoutY="280.0" onMouseClicked="#discountRegular" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/img/regular%20icon.png" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="468.0" layoutY="250.0" prefHeight="26.0" prefWidth="154.0" styleClass="discount" text="PWD" textFill="#7ed957" />
+      <Label alignment="CENTER" layoutX="682.0" layoutY="250.0" prefHeight="26.0" prefWidth="144.0" styleClass="discount" text="SENIOR" textFill="#7ed957" />
+      <Label alignment="CENTER" layoutX="682.0" layoutY="437.0" prefWidth="144.0" styleClass="discount" text="REGULAR" textFill="#7ed957" />
+      <Label alignment="CENTER" layoutX="468.0" layoutY="437.0" prefWidth="154.0" styleClass="discount" text="STUDENT" textFill="#7ed957" />
+      <Label id="discounttype" alignment="CENTER" layoutX="85.0" layoutY="223.0" prefHeight="142.0" prefWidth="273.0" text="PAYMENT" textFill="#7ed957">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cashInputField" alignment="CENTER" focusTraversable="false" layoutX="88.0" layoutY="333.0" prefHeight="40.0" prefWidth="270.0" promptText="Input Amount">
+         <font>
+            <Font name="Monospaced Italic" size="18.0" />
+         </font>
+      </TextField>
+      <Label alignment="CENTER" layoutX="178.0" layoutY="433.0" onMouseClicked="#switchToLostTicket" prefHeight="22.0" prefWidth="90.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 2;" text="LOST TICKET" textAlignment="CENTER" textFill="RED">
+         <font>
+            <Font name="Monospaced Bold Italic" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="108.0" layoutY="416.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="12.0" prefWidth="230.0" text="Ticket Lost? Press below (₱ 300  Fine)" textFill="WHITE">
+         <font>
+            <Font name="Monospaced Regular" size="10.0" />
+         </font>
+      </Label>
+      <Label layoutX="86.0" layoutY="-14.0" prefHeight="142.0" prefWidth="273.0" text="DETAILS:" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="48.0" />
+         </font>
+      </Label>
+      <Label fx:id="vehicleTypeLabel" layoutX="86.0" layoutY="95.0" text="VEHICLE TYPE:" textFill="WHITE">
+         <font>
+            <Font name="Monospaced Regular" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="totalLabel" layoutX="86.0" layoutY="225.0" text="TOTAL:" textFill="WHITE">
+         <font>
+            <Font name="Monospaced Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="entryTimeLabel" layoutX="86.0" layoutY="125.0" text="ENTRY TIME:" textFill="WHITE">
+         <font>
+            <Font name="Monospaced Regular" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="exitTimeLabel" layoutX="86.0" layoutY="155.0" text="EXIT TIME:" textFill="WHITE">
+         <font>
+            <Font name="Monospaced Regular" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="additionalChargeLabel" layoutX="86.0" layoutY="185.0" text="ADDITIONAL CHARGE:" textFill="WHITE">
+         <font>
+            <Font name="Monospaced Regular" size="16.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="173.0" layoutY="380.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#confirmPayment" prefHeight="30.0" prefWidth="100.0" style="-fx-background-color: #FFFFFF; -fx-background-radius: 3;" text="CONFIRM" textFill="#7ed957">
+         <font>
+            <Font name="Monospaced Bold" size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

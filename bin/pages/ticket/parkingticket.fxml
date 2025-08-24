@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #383e48;" stylesheets="@parkingticket.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pages.ticket.ParkingTicketController">
+   <children>
+      <Label id="parkingticket" alignment="CENTER" layoutX="50.0" layoutY="30.0" prefHeight="70.0" prefWidth="426.0" text="PARKING TICKET" textFill="#7ed957">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label id="printing" alignment="CENTER" layoutX="50.0" layoutY="90.0" prefHeight="39.0" prefWidth="191.0" text="PRINTING..." textFill="#737373">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="40.0" arcWidth="40.0" fill="WHITE" height="440.0" layoutX="615.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="330.0" />
+      <ImageView fitHeight="163.0" fitWidth="191.0" layoutX="620.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/img/car%20icon%20ticket.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="795.0" layoutY="53.0" text="ZOMBISAYA&#10;MALL" textAlignment="CENTER">
+         <font>
+            <Font name="Courier New" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="650.0" layoutY="153.0" text="------------------" textAlignment="CENTER">
+         <font>
+            <Font name="Courier New" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="20.0" fitWidth="267.0" layoutX="650.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/img/barcode.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="650.0" layoutY="335.0" text="------------------" textAlignment="CENTER">
+         <font>
+            <Font name="Courier New" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="650.0" layoutY="250.0" styleClass="ticketdetails" stylesheets="@parkingticket.css" text="VEHICLE TYPE:" />
+      <Label layoutX="650.0" layoutY="286.0" styleClass="ticketdetails" text="PARKING SLOT:" />
+      <Label layoutX="650.0" layoutY="320.0" styleClass="ticketdetails" text="ENTRY TIME:" />
+      <Label alignment="CENTER" layoutX="662.0" layoutY="368.0" prefHeight="38.0" prefWidth="244.0" text="“Please keep the ticket for&#10;inspection before exit”" textAlignment="CENTER">
+         <font>
+            <Font name="Courier New" size="15.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="650.0" layoutY="222.0" text="------------------" textAlignment="CENTER">
+         <font>
+            <Font name="Courier New" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="682.0" layoutY="175.0" styleClass="ticketdate" text="CHECK FOR PARKING" />
+      <Label fx:id="dateLabel" alignment="CENTER" layoutX="650.0" layoutY="205.0" prefHeight="24.0" prefWidth="260.0" styleClass="ticketdate" text="DATE" />
+      <Label fx:id="vehicleTypeLabel" alignment="CENTER_RIGHT" layoutX="758.0" layoutY="250.0" prefHeight="16.0" prefWidth="150.0" styleClass="ticketdetails" text="Label" />
+      <Label fx:id="entryTimeLabel" alignment="CENTER_RIGHT" layoutX="741.0" layoutY="320.0" prefHeight="16.0" prefWidth="167.0" styleClass="ticketdetails" text="Label" />
+      <Label fx:id="parkingSlotLabel" alignment="CENTER_RIGHT" layoutX="758.0" layoutY="286.0" prefHeight="16.0" prefWidth="150.0" styleClass="ticketdetails" text="Label" />
+   </children>
+</AnchorPane>

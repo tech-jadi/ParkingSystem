@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #383e48;" stylesheets="@vehicleselection.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pages.vehicle_type.VehicleSelectionController">
+   <children>
+      <ImageView fx:id="fourWheelerImage" fitHeight="239.0" fitWidth="411.0" layoutX="79.0" layoutY="163.0" onMouseClicked="#switchToFourWheelerPage" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/img/Car-removebg-preview.png" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="1.0" hue="-0.07" saturation="-0.01" />
+         </effect>
+      </ImageView>
+      <ImageView fx:id="twoWheelerImage" fitHeight="225.0" fitWidth="503.0" layoutX="589.0" layoutY="150.0" onMouseClicked="#switchToTwoWheelerPage" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../assets/img/motorc-removebg-preview.png" />
+         </image>
+         <effect>
+            <ColorAdjust brightness="1.0" />
+         </effect>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="221.0" layoutY="350.0" prefHeight="76.0" prefWidth="142.0" styleClass="page-text" text="4-WHEELER" textFill="#7ed957">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="680.0" layoutY="350.0" prefHeight="76.0" prefWidth="131.0" styleClass="page-text" text="2-WHEELER" textFill="#7ed957" />
+      <Label id="vehicletype" alignment="CENTER" layoutX="218.0" layoutY="45.0" prefHeight="142.0" prefWidth="564.0" text="SELECT VEHICLE TYPE" textFill="#7ed957">
+         <font>
+            <Font name="System Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label id="back" fx:id="backvsLabel" alignment="CENTER" layoutX="14.0" layoutY="446.0" onMouseClicked="#switchToStartingPage" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: #7ed957;" text="BACK" textFill="WHITE" />
+      <ImageView fx:id="twoWheelerFullSlotImage" fitHeight="172.0" fitWidth="165.0" layoutX="663.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <ColorAdjust contrast="0.04" hue="0.05" saturation="0.11" />
+         </effect>
+      </ImageView>
+      <ImageView fx:id="fourWheelerFullSlotImage" fitHeight="172.0" fitWidth="165.0" layoutX="210.0" layoutY="187.0" pickOnBounds="true" preserveRatio="true">
+         <effect>
+            <ColorAdjust contrast="0.04" hue="0.05" saturation="0.11" />
+         </effect>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #383e48;" stylesheets="@lostreceipt.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pages.receipt.lost.LostReceiptController">
+   <children>
+      <Label id="parkingticket" alignment="CENTER" layoutX="50.0" layoutY="30.0" prefHeight="70.0" prefWidth="463.0" text="PARKING RECEIPT" textFill="#7ed957">
+         <font>
+            <Font name="System Bold" size="31.0" />
+         </font>
+      </Label>
+      <Label id="printing" alignment="CENTER" layoutX="50.0" layoutY="90.0" prefHeight="39.0" prefWidth="191.0" text="PRINTING..." textFill="#737373">
+         <font>
+            <Font name="System Bold" size="32.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="40.0" arcWidth="40.0" fill="WHITE" height="440.0" layoutX="615.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="330.0" />
+      <ImageView fitHeight="163.0" fitWidth="191.0" layoutX="620.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../assets/img/car%20icon%20ticket.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="795.0" layoutY="53.0" text="ZOMBISAYA&#10;MALL" textAlignment="CENTER">
+         <font>
+            <Font name="Courier New" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="20.0" fitWidth="267.0" layoutX="650.0" layoutY="428.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../assets/img/barcode.png" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="650.0" layoutY="160.0" text="------------------" textAlignment="CENTER">
+         <font>
+            <Font name="Courier New" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="650.0" layoutY="362.0" text="------------------" textAlignment="CENTER">
+         <font>
+            <Font name="Courier New" size="24.0" />
+         </font>
+      </Label>
+      <Label id="thankyou" layoutX="719.0" layoutY="388.0" text="THANK YOU!" />
+      <Label layoutX="650.0" layoutY="250.0" styleClass="ticketdetails" text="VEHICLE TYPE:" />
+      <Label layoutX="650.0" layoutY="345.0" styleClass="total" text="TOTAL:">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="650.0" layoutY="226.0" prefHeight="20.0" prefWidth="110.0" styleClass="ticketdate" text="DATE &amp; TIME: &#10;" />
+      <Label alignment="CENTER" layoutX="650.0" layoutY="320.0" text="------------------" textAlignment="CENTER">
+         <font>
+            <Font name="Courier New" size="24.0" />
+         </font>
+      </Label>
+      <Label alignment="CENTER" layoutX="650.0" layoutY="207.0" text="------------------" textAlignment="CENTER">
+         <font>
+            <Font name="Courier New" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="705.0" layoutY="188.0" styleClass="ticketdetails" text="LOST TICKET RECEIPT" />
+      <Label layoutX="650.0" layoutY="312.0" styleClass="ticketdetails" text="PENALTY FEE:" />
+      <Label fx:id="dateTimeLabel" alignment="CENTER_RIGHT" layoutX="747.0" layoutY="226.0" prefHeight="20.0" prefWidth="162.0" styleClass="ticketdate" stylesheets="@lostreceipt.css" text="Label">
+         <font>
+            <Font size="1.0" />
+         </font></Label>
+      <Label fx:id="vehicleTypeLabel" alignment="CENTER_RIGHT" layoutX="750.0" layoutY="250.0" prefHeight="16.0" prefWidth="159.0" styleClass="ticketdetails" text="Label" />
+      <Label alignment="CENTER_RIGHT" layoutX="750.0" layoutY="312.0" prefWidth="159.0" styleClass="ticketdetails" text="₱ 300.00" />
+      <Label alignment="CENTER_RIGHT" layoutX="750.0" layoutY="345.0" prefHeight="19.0" prefWidth="159.0" styleClass="total" text="₱ 300.00" />
+   </children>
+</AnchorPane>

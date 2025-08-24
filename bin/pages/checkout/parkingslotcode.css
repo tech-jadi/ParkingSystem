@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+#enterslot {
+  -fx-font-family: "Montserrat", sans-serif;
+  -fx-font-weight: bold;
+  -fx-font-size: 64px;
+}
+
+#back {
+  -fx-font-family: "Montserrat", sans-serif;
+}
