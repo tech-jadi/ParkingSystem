@@ -1,18 +1,39 @@
-## Getting Started
+# Parking System
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+A simple **Parking System** application built with **JavaFX** for the user interface and **MySQL** for database management.  
+This project simulates how a parking management system works by handling vehicle entries, exits, and payment transactions.
 
-## Folder Structure
+---
 
-The workspace contains two folders by default, where:
+## 🚗 Features
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- Vehicle entry and exit tracking
+- Parking fee calculation based on duration
+- Database integration using **MySQL**
+- User-friendly interface powered by **JavaFX**
+- **Cash-only payment support** (no digital payments or cards)
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+---
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## 🛠️ Technologies Used
 
-## Dependency Management
+- **JavaFX** – for GUI
+- **MySQL** – for database storage
+- **Java** – as the core programming language
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+---
+
+## ⚠️ Limitations
+
+- Only **cash payments** are supported
+- No online/digital wallet/card integration
+- Designed primarily for academic demonstration
+
+---
+
+## 📘 Usage
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/parking-system.git
+   ```
