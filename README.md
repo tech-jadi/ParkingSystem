@@ -35,5 +35,5 @@ This project simulates how a parking management system works by handling vehicle
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/parking-system.git
+   git clone https://github.com/tech-jadi/ParkingSystem
    ```
