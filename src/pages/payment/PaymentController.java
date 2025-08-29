@@ -43,6 +43,13 @@ public class PaymentController {
 
   private boolean isDiscounted = false;
 
+  /**
+   * Loads the FXML file along with the details of the payment of the selected
+   * slot.
+   * 
+   * @param slotCode the code of the parking slot selected by the customer.
+   * @throws AssertionError if the selected slot is null
+   */
   @FXML
   public void start(String slotCode) {
     selectedSlot = DatabaseConnection.getSlotByCode(slotCode);
@@ -86,6 +93,14 @@ public class PaymentController {
     totalLabel.setText(totalLabel.getText() + " ₱" + String.format("%.2f", (subtotal)));
   }
 
+  /**
+   * Handles the payment confirmation process. Validates the input cash amount,
+   * calculates change if applicable, and navigates to the receipt page upon
+   * successful
+   * payment.
+   * 
+   * @throws IOException when the receipt FXML file cannot be loaded.
+   */
   @SuppressWarnings("unused")
   @FXML
   public void confirmPayment() throws IOException {
@@ -106,11 +121,14 @@ public class PaymentController {
         return;
       }
 
-      if (customerCash >= totalAmount) { // Proceed to receipt
+      // Check if cash is sufficient for payment
+      if (customerCash >= totalAmount) {
+        // Proceed to receipt
         Stage stage = (Stage) cashInputField.getScene().getWindow();
         FXMLLoader loader = new FXMLLoader(getClass().getResource("../receipt/normal/receipt.fxml"));
         Parent root = loader.load();
 
+        // Initializes receipt details for the upcoming receipt page
         ReceiptController controller = loader.getController();
         controller.start(new Customer(vehicleType, discountType, selectedSlot.slotCode(), startingTime,
             exitTime, subtotal, discountedAmount, customerCash));
@@ -118,8 +136,10 @@ public class PaymentController {
         Scene scene = new Scene(root);
         stage.setScene(scene);
       } else if (customerCash < totalAmount) {
+        // If cash is insufficient, show error on the input field as prompt text
         notifyCustomerCashError("Insufficient Cash");
 
+        // Revert back to default prompt text after 3 seconds
         PauseTransition timeout = new PauseTransition(javafx.util.Duration.seconds(3));
         timeout.setOnFinished(e -> {
           revertToDefaultCashInput();
@@ -127,8 +147,10 @@ public class PaymentController {
         timeout.play();
       }
     } catch (NumberFormatException e) {
+      // If input is not a number, show error on the input field as prompt text
       notifyCustomerCashError("Invalid Amount");
 
+      // Revert back to default prompt text after 3 seconds
       PauseTransition timeout = new PauseTransition(javafx.util.Duration.seconds(3));
       timeout.setOnFinished(e2 -> {
         revertToDefaultCashInput();
@@ -138,17 +160,33 @@ public class PaymentController {
     }
   }
 
+  /**
+   * Clears the input field, sets the prompt text to the specified error message,
+   * and sets the prompt text color to red.
+   * 
+   * @param text the error message to be displayed as prompt text.
+   */
   private void notifyCustomerCashError(String text) {
     cashInputField.clear();
     cashInputField.setPromptText(text);
     cashInputField.setStyle(("-fx-prompt-text-fill: #FF0000;"));
   }
 
+  /**
+   * Reverts the cash input field to its default state with the original prompt
+   * text and style.
+   */
   private void revertToDefaultCashInput() {
     cashInputField.setPromptText("Input Amount");
     cashInputField.setStyle(("-fx-prompt-text-fill: #A9A9A9;"));
   }
 
+  /**
+   * Applies a 15% discount for <i>Persons with Disabilities (PWD)</i> if no other
+   * discount has been applied yet. Updates the total amount displayed. If a
+   * discount has already been applied, the method exits without making any
+   * changes (<b>to avoid infinite discounting</b>).
+   */
   @FXML
   public void discountPWD() {
     if (isDiscounted) {
@@ -163,6 +201,12 @@ public class PaymentController {
     totalLabel.setText("Total(15% Off): ₱" + String.format("%.2f", totalAmount - discountedAmount));
   }
 
+  /**
+   * Applies a 15% discount for <i>Senior Citizens</i> if no other
+   * discount has been applied yet. Updates the total amount displayed. If a
+   * discount has already been applied, the method exits without making any
+   * changes (<b>to avoid infinite discounting</b>).
+   */
   @FXML
   public void discountSenior() {
     if (isDiscounted) {
@@ -177,6 +221,12 @@ public class PaymentController {
     totalLabel.setText("Total(15% Off): ₱" + String.format("%.2f", totalAmount - discountedAmount));
   }
 
+  /**
+   * Applies a 15% discount for <i>Studens</i> if no other
+   * discount has been applied yet. Updates the total amount displayed. If a
+   * discount has already been applied, the method exits without making any
+   * changes (<b>to avoid infinite discounting</b>).
+   */
   @FXML
   public void discountStudent() {
     if (isDiscounted) {
@@ -191,6 +241,12 @@ public class PaymentController {
     totalLabel.setText("Total(15% Off): ₱" + String.format("%.2f", totalAmount - discountedAmount));
   }
 
+  /**
+   * Reverts any applied discount, restoring the total amount to its original
+   * value
+   * before any discounts were applied. This method only functions if a discount
+   * has previously been applied; otherwise, it exits without making changes.
+   */
   @FXML
   public void discountRegular() {
     if (!isDiscounted) {
@@ -205,6 +261,13 @@ public class PaymentController {
     totalLabel.setText("Total: ₱" + String.format("%.2f", originalAmount));
   }
 
+  /**
+   * Switches to Lost Ticket page when the "Lost Ticket" label is clicked. Passes
+   * the selected slot code and vehicle type to the LostReceiptController for
+   * further details to display.
+   * 
+   * @throws IOException when the lost ticket FXML file cannot be loaded.
+   */
   @FXML
   public void switchToLostTicket() throws IOException {
     Stage stage = (Stage) cashInputField.getScene().getWindow();

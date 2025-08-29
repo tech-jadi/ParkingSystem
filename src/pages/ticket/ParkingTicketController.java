@@ -24,13 +24,21 @@ public class ParkingTicketController {
   @FXML
   Label dateLabel;
 
+  /**
+   * Auto invokes when the FXML File is loaded. Fetches the latest occupied slot
+   * from the database and displays its details in the labels. After a 5-second
+   * pause (mimicking printing time), it redirects to the starting page.
+   * 
+   * @throws IOException    if the start FXML file cannot be loaded.
+   * @throws AssertionError if no latest slot is found in the database.
+   */
   @SuppressWarnings("unused")
   @FXML
   public void initialize() {
     Slot latestSlot = DatabaseConnection.getLatestEntrySlot();
     assert latestSlot != null : "No latest slot found. Ensure a slot is occupied before generating a ticket.";
 
-    // Concatenate values for the labels
+    // Concatenate values for the labels and display the details in the labels
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM/dd/yyyy");
     String formattedDate = latestSlot.startingTime().toLocalDate().format(formatter);
     dateLabel.setText(formattedDate);

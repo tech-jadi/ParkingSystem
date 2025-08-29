@@ -16,6 +16,11 @@ public class StartController {
   @FXML
   Label parkingLabel;
 
+  /**
+   * Switches to Vehicle Selection page when the "Back" label is clicked.
+   * 
+   * @throws IOException when the vehicle selection FXML file cannot be loaded.
+   */
   @FXML
   public void switchToVehicleSelection() throws IOException {
     stage = (Stage) parkingLabel.getScene().getWindow();
@@ -24,6 +29,11 @@ public class StartController {
     stage.setScene(scene);
   }
 
+  /**
+   * Switches to Check Out page when the "Checkout" label is clicked.
+   * 
+   * @throws IOException when the checkout FXML file cannot be loaded.
+   */
   @FXML
   public void switchToCheckOut() throws IOException {
     stage = (Stage) parkingLabel.getScene().getWindow();

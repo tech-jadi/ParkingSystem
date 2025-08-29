@@ -42,11 +42,15 @@ public class Floor2Controller {
   @FXML
   Label prevLabel;
 
+  /**
+   * Sets the color of occupied slots to red based on the database records.
+   */
   private void setSlotOccupied() {
     for (Map.Entry<Integer, Circle> entry : slots.entrySet()) {
       int key = entry.getKey();
       Circle circle = entry.getValue();
 
+      // Check if the slot is occupied, if yes, set to red.
       List<Integer> availableSlots = DatabaseConnection.getIdOfAvailableSlots();
       if (!availableSlots.contains(key)) {
         circle.setFill(Color.web("#ff5757"));
@@ -54,6 +58,10 @@ public class Floor2Controller {
     }
   }
 
+  /**
+   * Auto invokes when the FXML is loaded. Initializes the slot map, sets occupied
+   * slots, and assigns click listeners to available slots.
+   */
   @SuppressWarnings("unused")
   @FXML
   public void initialize() {
@@ -92,6 +100,11 @@ public class Floor2Controller {
     }
   }
 
+  /**
+   * Switches to Floor 1 Page when the "PREV" label is clicked.
+   * 
+   * @throws IOException when the floor 1 FXML file cannot be loaded.
+   */
   @FXML
   public void goToFloor1() throws IOException {
     Stage stage = (Stage) prevLabel.getScene().getWindow();
@@ -100,6 +113,11 @@ public class Floor2Controller {
     stage.setScene(scene);
   }
 
+  /**
+   * Switches to Vehicle Selection page when the "Back" label is clicked.
+   * 
+   * @throws IOException when the vehicle selection FXML file cannot be loaded.
+   */
   @FXML
   public void goToVehicleSelection() throws IOException {
     Stage stage = (Stage) prevLabel.getScene().getWindow();

@@ -39,6 +39,12 @@ public class ReceiptController {
   @FXML
   Label dateLabel;
 
+  /**
+   * Initializes the receipt with customer details, updates the database to set
+   * the slot as unoccupied, and redirects to the starting page after 5 seconds.
+   * 
+   * @param customer the customer whose receipt is to be displayed
+   */
   @SuppressWarnings("unused")
   @FXML
   public void start(Customer customer) {
@@ -49,12 +55,14 @@ public class ReceiptController {
     String formmatedEntryTime = customer.entryTime().format(formatter);
     String formmatedExitTime = customer.exitTime().format(formatter);
 
+    // Sets important details to the labels (UPPER)
     vehicleTypeLabel.setText(customer.vehicleType());
     discountTypeLabel.setText(customer.discountType());
     parkingSlotLabel.setText(customer.slotCode());
     entryTimeLabel.setText(formmatedEntryTime);
     exitTimeLabel.setText(formmatedExitTime);
 
+    // Sets important details to the labels (LOWER)
     subtotalLabel.setText(String.format("₱%.2f", customer.subtotal()));
     discountLabel.setText(String.format("₱%.2f", customer.discountAmount()));
     totalLabel.setText(String.format("₱%.2f", customer.subtotal() - customer.discountAmount()));

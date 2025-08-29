@@ -33,6 +33,11 @@ public class VehicleSelectionController {
   @FXML
   ImageView twoWheelerImage;
 
+  /**
+   * Auto invokes when the FXML file is loaded. Checks the parking lot status
+   * and updates the UI accordingly (e.g., shows "full" images and disables
+   * clicks if a certain vehicle type is full).
+   */
   @FXML
   public void initialize() {
     Map<String, Integer> occupiedParkingLotMap = DatabaseConnection.getOccupiedParkingLot();
@@ -46,6 +51,7 @@ public class VehicleSelectionController {
       mainPane.getChildren().remove(twoWheelerFullSlotImage);
     }
 
+    // 4-Wheeler slots full logic
     if (occupiedParkingLotMap.get("4-Wheeler") == 60) {
       fourWheelerFullSlotImage.setImage(image);
       fourWheelerImage.setOnMouseClicked(null);
@@ -54,6 +60,11 @@ public class VehicleSelectionController {
     }
   }
 
+  /**
+   * Switches to Vehicle Selection page when the "Back" label is clicked.
+   * 
+   * @throws IOException when the vehicle selection FXML file cannot be loaded.
+   */
   @FXML
   public void switchToStartingPage() throws IOException {
     stage = (Stage) backvsLabel.getScene().getWindow();
@@ -62,6 +73,11 @@ public class VehicleSelectionController {
     stage.setScene(scene);
   }
 
+  /**
+   * Switches to Two-Wheeler parking page when the Two-Wheeler image is clicked.
+   * 
+   * @throws IOException when the two-wheeler parking FXML file cannot be loaded.
+   */
   @FXML
   public void switchToTwoWheelerPage() throws IOException {
     stage = (Stage) backvsLabel.getScene().getWindow();
@@ -70,6 +86,11 @@ public class VehicleSelectionController {
     stage.setScene(scene);
   }
 
+  /**
+   * Switches to Four-Wheeler parking page when the Four-Wheeler image is clicked.
+   * 
+   * @throws IOException when the four-wheeler parking FXML file cannot be loaded.
+   */
   @FXML
   public void switchToFourWheelerPage() throws IOException {
     stage = (Stage) backvsLabel.getScene().getWindow();
