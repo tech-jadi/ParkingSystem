@@ -133,8 +133,7 @@ public class DatabaseConnection {
 
   /**
    * Fetches a list of slot codes for all currently occupied parking slots from
-   * the
-   * database.
+   * the database.
    * 
    * @return a list of strings representing the slot codes of occupied parking
    *         slots.
