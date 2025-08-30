@@ -34,6 +34,17 @@ This project simulates how a parking management system works by handling vehicle
 ## 📘 Usage
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/tech-jadi/ParkingSystem
    ```
+
+2. Change the details of database connection
+<pre>
+
+````return DriverManager.getConnection(
+      "jdbc:mysql://localhost:3306/parking_lot", **-- Your sql url**
+      "root", **-- Your username**
+      "root"); **-- Your password**```
+</pre>
+````
