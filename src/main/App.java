@@ -26,6 +26,10 @@ public class App extends Application {
     primaryStage.show();
   }
 
+  /**
+   * The main entry point for the Java application. This method launches the
+   * JavaFX application.
+   */
   public static void main(String[] args) {
     launch(args);
   }
