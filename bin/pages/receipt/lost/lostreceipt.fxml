@@ -25,7 +25,7 @@
             <Image url="@../../../../assets/img/car%20icon%20ticket.png" />
          </image>
       </ImageView>
-      <Label alignment="CENTER" layoutX="795.0" layoutY="53.0" text="ZOMBISAYA&#10;MALL" textAlignment="CENTER">
+      <Label alignment="CENTER" layoutX="795.0" layoutY="53.0" prefHeight="56.0" prefWidth="125.0" text="OASIS&#10;MALL" textAlignment="CENTER">
          <font>
             <Font name="Courier New" size="24.0" />
          </font>

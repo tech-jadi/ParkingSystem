@@ -8,7 +8,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" style="-fx-background-color: #383e48;" stylesheets="@start.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pages.starting.StartController">
    <children>
-      <Label id="companyname" alignment="CENTER" layoutX="250.0" layoutY="-33.0" prefHeight="142.0" prefWidth="500.0" styleClass="title-text" text="ZOMBISAYA MALL" textFill="#7ed957">
+      <Label id="companyname" alignment="CENTER" layoutY="-33.0" prefHeight="142.0" prefWidth="1000.0" text="OASIS MALL" textFill="#7ed957">
          <font>
             <Font name="System Bold" size="48.0" />
          </font>
