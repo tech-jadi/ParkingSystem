@@ -43,7 +43,7 @@ public class VehicleSelectionController {
     Map<String, Integer> occupiedParkingLotMap = DatabaseConnection.getOccupiedParkingLot();
 
     // 2-Wheeler slots full logic
-    Image image = new Image("file:D:/workspace/ParkingSystem/assets/img/full-parking.png");
+    Image image = new Image("file:assets/img/full-parking.png");
     if (occupiedParkingLotMap.get("2-Wheeler") == 18) {
       twoWheelerFullSlotImage.setImage(image);
       twoWheelerImage.setOnMouseClicked(null);
