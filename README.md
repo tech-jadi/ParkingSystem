@@ -39,12 +39,11 @@ This project simulates how a parking management system works by handling vehicle
    git clone https://github.com/tech-jadi/ParkingSystem
    ```
 
-2. Change the details of database connection
+2. Change the details of database connection to your credentials.
 
-````java
+```java
   return DriverManager.getConnection(
-        "jdbc:mysql://localhost:3306/parking_lot", **-- Your sql url**
-        "root", **-- Your username**
-        "root"); **-- Your password**```
-  </pre>
-````
+        "jdbc:mysql://localhost:3306/parking_lot", // <- Your SQL URL
+        "root", // <- Your SQL user
+        "root"); // <- Your SQL password
+```
