@@ -20,6 +20,14 @@ import model.Slot;
  * @throws SQLException if a database access error occurs.
  */
 public class DatabaseConnection {
+
+  /**
+   * Establishes and returns a connection to the parking lot database.
+   * 
+   * @return a Connection object to the database, or null if the connection
+   *         fails.
+   * @throws SQLException if a database access error occurs.
+   */
   private static Connection getConnection() {
     try {
       return DriverManager.getConnection(
